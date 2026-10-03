@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Tahoma, sans-serif;
+    background: #090d14;
+    color: #f5f7fa;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1120px, 92%);
+    margin: auto;
+}
+
+/* Header */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(9, 13, 20, 0.92);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #202938;
+}
+
+.nav {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span,
+.footer-logo span {
+    color: #4f8cff;
+}
+
+.nav-button {
+    background: #4f8cff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.nav-button:hover {
+    transform: translateY(-2px);
+    background: #3978e8;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 80% 30%, rgba(79, 140, 255, 0.15), transparent 35%),
+        #090d14;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 80px;
+    padding: 80px 0;
+}
+
+.badge {
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid #26344c;
+    background: #111824;
+    color: #8db5ff;
+    border-radius: 50px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #4f8cff;
+}
+
+.hero p {
+    color: #9ca8ba;
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 32px;
+}
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.download-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #4f8cff;
+    padding: 13px 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.download-button:hover {
+    transform: translateY(-3px);
+    background: #3978e8;
+}
+
+.download-button small {
+    display: block;
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+.android-icon {
+    font-size: 25px;
+}
+
+.secondary-button {
+    border: 1px solid #2a3546;
+    background: #111722;
+    padding: 14px 20px;
+    border-radius: 12px;
+    color: #d9e1ed;
+}
+
+.secondary-button:hover {
+    border-color: #4f8cff;
+}
+
+/* Phone */
+
+.phone-area {
+    display: flex;
+    justify-content: center;
+}
+
+.phone {
+    width: 270px;
+    height: 550px;
+    padding: 10px;
+    border: 5px solid #293241;
+    border-radius: 38px;
+    background: #05070b;
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.5),
+        0 0 50px rgba(79, 140, 255, 0.08);
+    position: relative;
+}
+
+.phone-camera {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 20px;
+    border-radius: 20px;
+    background: #05070b;
+    z-index: 5;
+}
+
+.phone-screen {
+    height: 100%;
+    border-radius: 27px;
+    padding: 45px 18px 20px;
+    background: #101722;
+}
+
+.app-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.app-top strong {
+    color: #fff;
+}
+
+.app-top span {
+    color: #7f8ca0;
+}
+
+.currency-card {
+    background: #182130;
+    border: 1px solid #26344a;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.currency-card p {
+    color: #7f8ca0;
+    font-size: 12px;
+}
+
+.currency-card strong {
+    display: block;
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+.currency-card span {
+    color: #6e9fff;
+    font-size: 13px;
+}
+
+.exchange {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    margin: -3px auto 9px;
+    border-radius: 50%;
+    background: #4f8cff;
+    font-size: 20px;
+}
+
+.convert-button {
+    text-align: center;
+    background: #4f8cff;
+    border-radius: 12px;
+    padding: 12px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Features */
+
+.features {
+    padding: 100px 0;
+    background: #0d131d;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    color: #4f8cff;
+    font-size: 14px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    margin: 8px 0;
+}
+
+.section-title p {
+    color: #8996a9;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #121a26;
+    border: 1px solid #202c3d;
+    border-radius: 18px;
+    padding: 30px;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #385f9f;
+}
+
+.card-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #8c98aa;
+}
+
+/* Download */
+
+.download-section {
+    padding: 100px 0;
+    background: #090d14;
+}
+
+.download-box {
+    text-align: center;
+    padding: 65px 25px;
+    border: 1px solid #27364b;
+    border-radius: 25px;
+    background:
+        radial-gradient(circle at center, rgba(79, 140, 255, 0.12), transparent 55%),
+        #101722;
+}
+
+.download-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.download-box h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.download-box p {
+    color: #929eb0;
+    margin-bottom: 28px;
+}
+
+.big-download {
+    display: inline-block;
+    background: #4f8cff;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.big-download:hover {
+    background: #3978e8;
+    transform: translateY(-2px);
+}
+
+.file-name {
+    margin-top: 15px;
+    color: #68778c;
+    font-size: 13px;
+}
+
+/* Footer */
+
+footer {
+    border-top: 1px solid #202938;
+    padding: 30px 0;
+    text-align: center;
+    background: #070a10;
+}
+
+.footer-logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+footer p {
+    color: #697689;
+    font-size: 13px;
+}
+
+/* Mobile */
+
+@media (max-width: 850px) {
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .phone {
+        width: 245px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .nav-button {
+        padding: 8px 13px;
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .section-title h2,
+    .download-box h2 {
+        font-size: 30px;
+    }
+
+    .download-button,
+    .secondary-button {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
